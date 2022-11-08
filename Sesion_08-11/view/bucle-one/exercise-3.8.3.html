@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- bootswatch -->
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='../../asset/library/node_modules/bootswatch/dist/sandstone/bootstrap.css'>
+
+
+    <!-- Libreria Sweet Alert2 -->
+    <script src="../../asset/library/node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+
+    <!-- Funciones personalizadas -->
+    <script src='../../js/functions.js'></script>
+
+    <!-- Lógica del ejercicio exercise-3.8.3 -->
+    <script src='../../js/bucle-one/exercise-3.8.3.js'></script>
+</head>
+
+<body>
+
+    <table class="table table-primary">
+        <tr>
+            <td colspan="2">
+                <label>
+                    3.8.3. En un centro de verificación de automóviles se desea saber el promedio de puntos
+                    contaminantes de los
+                    primeros 25 automóviles que lleguen. Asimismo se desea saber los puntos contaminantes del carro que
+                    menos
+                    contamino y del que más contamino.
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Cantidad de autos: </td>
+            <td>
+                <input type="number" name="cantidad" id="cantidad" value=""
+                    onblur="CrearFormulario();" placeholder="Solo positivos">
+                <!-- <button class="btn btn-primary">Crear Formulario</button> -->
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <td># Placa</td>
+                <td>Punto Contaminante</td>
+            </tr>
+        </thead>
+        <tbody id="data">
+            <!-- Aquí se imprime de manera dínamica por js -->
+        </tbody>
+        <br>        
+    </table>
+    <br>
+    <input type="button" class="btn btn-primary" onclick="CalcularDatos();" value="Calcular--">
+    <table class="table alert-success">
+        <tr>
+            <td>Promedio</td>
+            <td>
+                <label id="promedio"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Mayor Punto Contaminante</td>
+            <td><label id="mayorPunto"></label></td>
+        </tr>
+        <tr>
+            <td>Menor Punto Contaminante</td>
+            <td><label id="menorPunto"></label></td>
+        </tr>
+    </table>
+</body>
+
+</html>
