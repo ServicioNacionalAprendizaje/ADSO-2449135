@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejemplo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../asset/library/node_modules/bootswatch/dist/sandstone/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../asset/css/global.css'>
+    <script src='../js/GenerarPromedio.js'></script>
+</head>
+<body>
+    <div class="contenedor">
+        <table class="table table-active">
+            <tr>
+                <td colspan="3">
+                    Hallar el promedio de notas de los Aprendices de la ficha 135.
+                </td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td>
+                    <input type="text" class="form-label mt-1" name="nombre" id="nombre" placeholder="Ingresar nombre">
+                </td>
+                <td rowspan="3">
+                    <input type="button" class="btn btn-success" value="+" onclick="GenerarPromedio();">
+                </td>
+            </tr>
+            <tr>
+                <td>Nota</td>
+                <td>
+                    <input type="number" class="form-label mt-1" name="nota" id="nota" placeholder="Ingresar nota">
+                </td>
+            </tr>  
+            <tr>
+                <td>Promedio Actual</td>
+                <td>
+                    <input type="text" class="form-label mt-1" name="promedio" id="promedio" value="0" disabled>
+                </td>
+            </tr>        
+        </table>
+    </div>
+    <div>
+        <table class="table table-active">
+            <thead>
+                <tr>
+                    <td>
+                        Nombre
+                    </td>
+                    <td>
+                        Nota
+                    </td>
+                    <td>
+                        Editar
+                    </td>
+                    <td>
+                        Eliminar
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="dataResult">
+                
+            </tbody>                   
+        </table>
+    </div>
+</body>
+</html>
