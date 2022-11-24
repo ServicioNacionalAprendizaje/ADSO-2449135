@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Evidencia de Conicimiento</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../asset/library/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- Ventas -->
+    <script src='../../js/Evidencia/Ventas.js'></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Datos de entrada -->
+        <div>
+            <table class="table table-hover">               
+                <thead>
+                    <tr class="table-active">
+                        <td colspan="2"><h3>Datos de la venta</h3></td>                        
+                    </tr>
+                    <tr class="table-active">
+                        <td>Nombre</td>
+                        <td>
+                            <input type="text" name="nombre" id="nombre">
+                            <input type="hidden" name="id" id="id">
+                        </td>
+                    </tr>
+                    <tr class="table-active">
+                        <td>Valor Bruto</td>
+                        <td><input type="number" name="valorBruto" id="valorBruto"></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td>Porcentaje Descuento</td>
+                        <td><input type="text" name="porcentajeDescuento" id="porcentajeDescuento" size="2" minlength="1" maxlength="3"></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td>Porcentaje IVA</td>
+                        <td><input type="text" name="iva" id="iva" disabled value="19%"></td>
+                    </tr>
+                    <tr class="table-active">
+                        <td colspan="2">
+                            <button type="button" class="btn btn-primary" onclick="addRow()">Registrar Venta</button>
+                            <button type="button" class="btn btn-primary">Cerrar Caja</button>
+                            <button type="button" class="btn btn-primary" onclick="updateRow()">Modificar</button>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <!-- lista de Datos -->
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-active">
+                    <td>Nombre</td>
+                    <td>Valor Bruto</td>
+                    <td>Porcentaje Descuento</td>
+                    <td>Descuento</td>                    
+                    <td>Valor Venta</td>
+                    <td>Editar</td>
+                    <td>Eliminar</td>
+                </tr>
+            </thead>
+            <tbody id="dataResult">
+                <!-- Aquí se imprime de manera dínamica                             -->
+            </tbody>          
+        </table>
+    </div>
+</body>
+
+</html>
